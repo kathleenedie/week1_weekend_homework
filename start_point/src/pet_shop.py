@@ -15,3 +15,9 @@ def get_pets_sold(cc_pet_shop):
 def increase_pets_sold(cc_pet_shop, pets_1):
     cc_pet_shop["admin"]["pets_sold"] = cc_pet_shop["admin"]["pets_sold"] + pets_1
     return get_pets_sold
+
+def get_stock_count(cc_pet_shop):
+    count =0
+    for pet in cc_pet_shop["pets"]:
+        count = count +1
+    return count
