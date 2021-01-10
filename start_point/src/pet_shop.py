@@ -66,5 +66,7 @@ def get_customer_pet_count (customers):
 
 def customer_can_afford_pet(customers, new_pet):
     for customer in customers:
-        customers["cash"] >= new_pet["price"]
-    return bool(customer_can_afford_pet)
+        if customers["cash"] >= new_pet["price"]:
+            return True
+        elif customers["cash"] < new_pet["price"]:
+            return False
