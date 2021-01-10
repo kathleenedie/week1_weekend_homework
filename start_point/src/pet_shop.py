@@ -39,4 +39,15 @@ def remove_pet_by_name (cc_pet_shop, pet_name):
         if pet ["name"] == pet_name:
             cc_pet_shop["pets"].remove(pet)
     return find_pet_by_name
-    
+
+# def add_pet_to_stock (cc_pet_shop, new_pets):
+#     for newpet in new_pets:
+#         if newpet == True:
+#             cc_pet_shop["pets"].append(newpet)
+#     return get_stock_count
+
+def get_customer_cash (customers):
+    return customers["cash"]
+
+def remove_customer_cash (customers, cash_1):
+    customers["cash"] = customers["cash"] - cash_1
