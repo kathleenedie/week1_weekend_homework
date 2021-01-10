@@ -21,3 +21,22 @@ def get_stock_count(cc_pet_shop):
     for pet in cc_pet_shop["pets"]:
         count = count +1
     return count
+
+def get_pets_by_breed (cc_pet_shop, breed):
+    pet_breed = []
+    for pet in cc_pet_shop["pets"]:
+        if pet ["breed"] == breed:
+            pet_breed.append(pet)
+    return pet_breed
+
+def find_pet_by_name (cc_pet_shop, pet_name):
+    for pet in cc_pet_shop["pets"]:
+        if pet ["name"] == pet_name:
+            return pet
+
+def remove_pet_by_name (cc_pet_shop, pet_name):
+    for pet in cc_pet_shop["pets"]:
+        if pet ["name"] == pet_name:
+            cc_pet_shop["pets"].remove(pet)
+    return find_pet_by_name
+    
